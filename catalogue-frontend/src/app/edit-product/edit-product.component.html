@@ -1,0 +1,51 @@
+<div class="container ">
+  <div class="card mt-5">
+    <div class="card-header bg-light ">
+      Edit product
+    </div>
+    <div class="card-body" *ngIf="product">
+      <form #f="ngForm" (ngSubmit)="onUpdateProduct(f.value)">
+        <div class="form-group mb-4">
+          <label class="form-label">Product Name</label>
+          <input
+            type="text"
+            placeholder="Macbok Pro"
+            class="form-control"
+            [(ngModel)]="product.designation"
+            name="name"
+            ngModel
+          />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label">Product price</label>
+          <input
+            type="text"
+            placeholder="99.05"
+            class="form-control"
+            [(ngModel)]="product.price"
+            name="price"
+            ngModel
+          />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label">Product Quantity</label>
+          <input
+            type="text"
+            placeholder="4"
+            class="form-control"
+            [(ngModel)]="product.quantity"
+            name="qte"
+            ngModel
+          />
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block offset-6 mb-3">
+          Update
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

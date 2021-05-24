@@ -1,0 +1,48 @@
+<div class="container ">
+  <div class="card mt-5">
+    <div class="card-header bg-light ">
+      Add new product
+    </div>
+    <div class="card-body">
+      <form #f="ngForm" (ngSubmit)="onSubmitForm(f.value)">
+        <div class="form-group mb-4">
+          <label class="form-label">Product Name</label>
+          <input
+            type="text"
+            placeholder="Macbok Pro"
+            class="form-control"
+            name="name"
+            ngModel
+          />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label">Product price</label>
+          <input
+            type="text"
+            placeholder="99.05"
+            class="form-control"
+            name="price"
+            ngModel
+          />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label">Product Quantity</label>
+          <input
+            type="text"
+            placeholder="4"
+            class="form-control"
+            name="qte"
+            ngModel
+          />
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block offset-6 mb-3">
+          Add
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
